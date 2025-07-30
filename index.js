@@ -1,13 +1,21 @@
 const args = process.argv.slice(2);
 const Player1 = args[0];
-console.log(`You chose ${Player1}`);
 
 const value = ["Rock", "Paper", "Scissors"];
 
-if (Player1 !== "Rock" && Player1 !== "Paper" && Player1 !== "Scissors") {
+if (args.length > 1) {
+  console.log("Please enter only One value");
+  return;
+} else if (
+  Player1 !== "Rock" &&
+  Player1 !== "Paper" &&
+  Player1 !== "Scissors"
+) {
   console.log("Please write Any option from Rock Paper or Scissors");
   return;
 }
+console.log(`You chose ${Player1}`);
+
 const randomInput = Math.floor(Math.random() * value.length);
 const Player2 = value[randomInput];
 console.log(`Player2 chose ${Player2}`);
