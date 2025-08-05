@@ -1,32 +1,5 @@
 console.log(process.argv);
-const alphabets = [
-  "a",
-  "b",
-  "c",
-  "d",
-  "e",
-  "f",
-  "g",
-  "h",
-  "i",
-  "j",
-  "k",
-  "l",
-  "m",
-  "n",
-  "o",
-  "p",
-  "q",
-  "r",
-  "s",
-  "t",
-  "u",
-  "v",
-  "w",
-  "x",
-  "y",
-  "z",
-];
+const alphabets = "abcdefghijklmnopqrstuvwxyz";
 
 const userInput = process.argv.slice(2);
 const inputString = userInput[0];
@@ -66,6 +39,7 @@ for (let index = 0; index < inputArray.length; index++) {
     if (pos > alphabets.length) {
       pos = alphabets.length - actualPosition;
       const finalPos = inputPosition - pos;
+
       shiftedLetter = alphabets[finalPos - 1];
     } else if (pos < 1) {
       pos = alphabets.length + pos;
